@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "850d6067-15ed-4f6d-9d61-0e737196e97e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4287057"
+	},
+	"item": [
+		{
+			"name": "Tooling Query Trigger",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/query/?q=SELECT Id FROM ApexTrigger WHERE Name='OrderShippingEventTrigger'",
+					"host": [
+						"{{_endpoint}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v{{version}}",
+						"tooling",
+						"query",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT Id FROM ApexTrigger WHERE Name='OrderShippingEventTrigger'",
+							"description": "SOQL Query"
+						}
+					]
+				},
+				"description": "Executes a query against an object and returns data that matches the specified criteria. Tooling API exposes objects like EntityDefinition and FieldDefinition that use the external object framework. That is, they don’t exist in the database but are constructed dynamically. Special query rules apply to virtual entities.\nIf the query result is too large, it’s broken up into batches. The response contains the first batch of results and a query identifier. The identifier can be used in a request to retrieve the next batch."
+			},
+			"response": [
+				{
+					"name": "Tooling Query",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/query/?q=SELECT Name FROM ApexClass",
+							"host": [
+								"{{_endpoint}}"
+							],
+							"path": [
+								"services",
+								"data",
+								"v{{version}}",
+								"tooling",
+								"query",
+								""
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "SELECT Name FROM ApexClass",
+									"description": "SOQL Query"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Dec 2023 09:36:10 GMT"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache,must-revalidate,max-age=0,no-store,private"
+						},
+						{
+							"key": "Sforce-Limit-Info",
+							"value": "api-usage=93/15000"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"size\": 38,\n    \"totalSize\": 38,\n    \"done\": true,\n    \"queryLocator\": null,\n    \"entityTypeName\": \"ApexClass\",\n    \"records\": [\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H00000A4kfqQAB\"\n            },\n            \"Name\": \"GenericEventPostMock\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H00000A4kfrQAB\"\n            },\n            \"Name\": \"StreamingMonitorController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H00000A4kfsQAB\"\n            },\n            \"Name\": \"StreamingMonitorControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p58000009UEeJAAW\"\n            },\n            \"Name\": \"MyController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p58000009UDoMAAW\"\n            },\n            \"Name\": \"ProcessingController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H000009PEFIQA4\"\n            },\n            \"Name\": \"PrepareSandbox\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H00000A0zYxQAJ\"\n            },\n            \"Name\": \"PrepareSandboxTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqEAAQ\"\n            },\n            \"Name\": \"MyProfilePageController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090uh7AAA\"\n            },\n            \"Name\": \"InTheArea\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wq6AAA\"\n            },\n            \"Name\": \"SiteLoginController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wq7AAA\"\n            },\n            \"Name\": \"SiteLoginControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wq8AAA\"\n            },\n            \"Name\": \"SiteRegisterController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wq9AAA\"\n            },\n            \"Name\": \"SiteRegisterControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqAAAQ\"\n            },\n            \"Name\": \"ChangePasswordController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqBAAQ\"\n            },\n            \"Name\": \"ChangePasswordControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqCAAQ\"\n            },\n            \"Name\": \"ForgotPasswordController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqDAAQ\"\n            },\n            \"Name\": \"ForgotPasswordControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqFAAQ\"\n            },\n            \"Name\": \"MyProfilePageControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqOAAQ\"\n            },\n            \"Name\": \"CommunitiesLoginController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqPAAQ\"\n            },\n            \"Name\": \"CommunitiesLoginControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqQAAQ\"\n            },\n            \"Name\": \"CommunitiesLandingController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqRAAQ\"\n            },\n            \"Name\": \"CommunitiesLandingControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqSAAQ\"\n            },\n            \"Name\": \"CommunitiesSelfRegController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqTAAQ\"\n            },\n            \"Name\": \"CommunitiesSelfRegControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqUAAQ\"\n            },\n            \"Name\": \"CommunitiesSelfRegConfirmController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqVAAQ\"\n            },\n            \"Name\": \"CommunitiesSelfRegConfirmControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqcAAA\"\n            },\n            \"Name\": \"LightningSelfRegisterController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqdAAA\"\n            },\n            \"Name\": \"LightningForgotPasswordController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqeAAA\"\n            },\n            \"Name\": \"LightningLoginFormController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqfAAA\"\n            },\n            \"Name\": \"LightningLoginFormControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqgAAA\"\n            },\n            \"Name\": \"LightningForgotPasswordControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wqhAAA\"\n            },\n            \"Name\": \"LightningSelfRegisterControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090wrUAAQ\"\n            },\n            \"Name\": \"SigninController\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p580000090sf4AAA\"\n            },\n            \"Name\": \"trailheadAPIChallenge\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H00000ANdnqQAD\"\n            },\n            \"Name\": \"AccountTriggerHelperTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H00000ANdnpQAD\"\n            },\n            \"Name\": \"AccountTriggerHelper\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H000009aIwvQAE\"\n            },\n            \"Name\": \"MicrobatchSelfRegControllerTest\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"ApexClass\",\n                \"url\": \"/services/data/v59.0/tooling/sobjects/ApexClass/01p4H000009aIwuQAE\"\n            },\n            \"Name\": \"MicrobatchSelfRegController\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Post Tooling SObject PlatformEventSubscriberConfig",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BatchSize\": \"100\",\n    \"DeveloperName\":\"OrderShippingEventTriggerConfig\",\n    \"MasterLabel\":\"OrderShippingEventTriggerConfig\",\n    \"PlatformEventConsumerId\": \"01qdL000004zPX3QAM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/sobjects/PlatformEventSubscriberConfig",
+					"host": [
+						"{{_endpoint}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v{{version}}",
+						"tooling",
+						"sobjects",
+						"PlatformEventSubscriberConfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add enriched fields to channel member",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"FullName\": \"SalesEvents_chn_AccountChangeEvent\",\n  \"Metadata\": {\n  \"enrichedFields\": [\n    {\n      \"name\": \"Phone\"\n    }\n  ],\n  \"eventChannel\": \"SalesEvents__chn\",\n  \"selectedEntity\": \"AccountChangeEvent\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/sobjects/PlatformEventChannelMember/0v8dL000000AoI5QAK",
+					"host": [
+						"{{_endpoint}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v{{version}}",
+						"tooling",
+						"sobjects",
+						"PlatformEventChannelMember",
+						"0v8dL000000AoI5QAK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create channel SalesEvent chn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n  \"FullName\": \"SalesEvents__chn\",\n  \"Metadata\": {\n    \"channelType\": \"data\",\n    \"label\": \"Custom Channel for Sales App\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/sobjects/PlatformEventChannel",
+					"host": [
+						"{{_endpoint}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v{{version}}",
+						"tooling",
+						"sobjects",
+						"PlatformEventChannel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create channel Order Filterd",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "\"\""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{_accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"FullName\": \"Order_Filtered_Channel__chn\",\n  \"Metadata\": {\n    \"channelType\": \"event\",\n    \"label\": \"Order Filtered Channel\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/sobjects/PlatformEventChannel",
+					"host": [
+						"{{_endpoint}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v{{version}}",
+						"tooling",
+						"sobjects",
+						"PlatformEventChannel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List event channels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/query/?q=SELECT Id, DeveloperName, MasterLabel, ChannelType FROM PlatformEventChannel WHERE DeveloperName='SalesEvents'",
+					"host": [
+						"{{_endpoint}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v{{version}}",
+						"tooling",
+						"query",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT Id, DeveloperName, MasterLabel, ChannelType FROM PlatformEventChannel WHERE DeveloperName='SalesEvents'"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List event channels",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/query/?q=SELECT Id, DeveloperName, MasterLabel, ChannelType FROM PlatformEventChannel",
+							"host": [
+								"{{_endpoint}}"
+							],
+							"path": [
+								"services",
+								"data",
+								"v{{version}}",
+								"tooling",
+								"query",
+								""
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "SELECT Id, DeveloperName, MasterLabel, ChannelType FROM PlatformEventChannel"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 03 Jul 2023 13:15:17 GMT"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache,must-revalidate,max-age=0,no-store,private"
+						},
+						{
+							"key": "Sforce-Limit-Info",
+							"value": "api-usage=7/15000"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"size\": 2,\n    \"totalSize\": 2,\n    \"done\": true,\n    \"queryLocator\": null,\n    \"entityTypeName\": \"PlatformEventChannel\",\n    \"records\": [\n        {\n            \"attributes\": {\n                \"type\": \"PlatformEventChannel\",\n                \"url\": \"/services/data/v58.0/tooling/sobjects/PlatformEventChannel/0YL4H0000004C93WAE\"\n            },\n            \"Id\": \"0YL4H0000004C93WAE\",\n            \"DeveloperName\": \"HREvents\",\n            \"MasterLabel\": \"Custom Channel for the HR App\",\n            \"ChannelType\": \"data\"\n        },\n        {\n            \"attributes\": {\n                \"type\": \"PlatformEventChannel\",\n                \"url\": \"/services/data/v58.0/tooling/sobjects/PlatformEventChannel/0YL4H0000004C98WAE\"\n            },\n            \"Id\": \"0YL4H0000004C98WAE\",\n            \"DeveloperName\": \"AdvocateEvents\",\n            \"MasterLabel\": \"Custom Channel for the HR App\",\n            \"ChannelType\": \"data\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create SalesEvent channel member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"FullName\": \"SalesEvents_chn_AccountChangeEvent\",\n  \"Metadata\": {\n    \"enrichedFields\": [\n      {\n        \"name\": \"External_Account_ID__c\"\n      },\n      {\n        \"name\": \"Industry\"\n      }\n    ],\n    \"eventChannel\": \"SalesEvents__chn\",\n    \"selectedEntity\": \"AccountChangeEvent\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{_endpoint}}/services/data/v{{version}}/tooling/sobjects/PlatformEventChannelMember",
+					"host": [
+						"{{_endpoint}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v{{version}}",
+						"tooling",
+						"sobjects",
+						"PlatformEventChannelMember"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
